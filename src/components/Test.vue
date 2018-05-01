@@ -6,7 +6,7 @@
       <router-link to="/">Home</router-link>
     </div>
     <div>
-      <!-- <h2>{{mode}}</h2> -->
+      <h2>{{mode}}</h2>
     </div>
     </div>
     <div><span>{{count}}</span></div>
@@ -17,7 +17,7 @@
 export default {
   data () {
     return {
-      // mode: process.env.VUE_ENV === 'server' ? 'server' : 'client',
+      mode: 'client',
       count: 2
     }
   }

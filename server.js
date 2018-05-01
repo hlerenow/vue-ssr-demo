@@ -32,7 +32,7 @@ app.use(async (req, res, next) => {
       title: '服务端渲染测试', // {{title}}
       url: req.url
     }
-    console.log(req.url);
+    console.log(req.url)
     // 将服务器端渲染好的html返回给客户端
     const body = await renderToString(context)
 
@@ -47,6 +47,6 @@ app.listen(3001, function (err) {
   if (err) {
     console.log(err)
   } else {
-    console.log('run on 3001');
+    console.log('run on 3001')
   }
 })

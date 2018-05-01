@@ -15,10 +15,19 @@
 </template>
 <script>
 export default {
+  name: 'test',
+  asyncData ({store, route}) {
+    return store.dispatch('fetchItem', route.params.id)
+  },
   data () {
     return {
       mode: 'client',
       count: 2
+    }
+  },
+  computed: {
+    item () {
+      return this.$store.state.items[this.$route.parmas.id]
     }
   }
 }

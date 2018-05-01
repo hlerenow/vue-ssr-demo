@@ -6,18 +6,22 @@ import {
   createRouter
 } from './router'
 
+import { createStore } from './store'
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 export function createApp () {
+  const store = createStore()
   const router = createRouter()
   const app = new Vue({
     router,
+    store,
     components: {
       App
     },
     template: '<App/>'
   })
 
-  return {app, router}
+  return {app, router, store}
 }
